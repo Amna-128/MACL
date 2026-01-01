@@ -1,4 +1,3 @@
-
 # MACL: Multi-Label Adaptive Contrastive Learning for Remote Sensing Image Retrieval
 
 This repository contains the implementation of MACL (Multi-Label Adaptive Contrastive Learning), 
@@ -7,7 +6,7 @@ a contrastive learning loss designed for multi-label remote sensing image retrie
 MACL addresses challenges such as semantic overlap, class imbalance, and complex label co-occurrence 
 by adaptively weighting sample pairs and dynamically adjusting the similarity temperature.
 
----
+
 
 ## Why MACL
 
@@ -31,7 +30,7 @@ The temperature used in contrastive learning adapts according to:
 
 This produces more meaningful separations in the embedding space and improves retrieval performance.
 
----
+
 
 ## Key Features
 
@@ -43,21 +42,18 @@ This produces more meaningful separations in the embedding space and improves re
 ✔️ State-of-the-art retrieval performance on multiple benchmarks  
 
 
----
 
 ## Datasets
 
 MACL is evaluated on three multi-label remote sensing datasets:
 
-**DLRSD**: aerial scenes with diverse land-use categories  
-**ML-AID**: multi-label extension of the AID dataset  
-**WHDLD**: dense pixel-level land-cover dataset
-
+- **DLRSD** — high-resolution urban & natural scenes  
+- **ML-AID** — multi-label version of AID  
+- **WHDLD** — pixel-level labeled land-cover dataset  
 
 Each dataset contains images with multiple co-occurring labels.
 
 
----
 
 ## Method Overview
 
@@ -74,7 +70,24 @@ Retrieval phase:
 
 
 
----
+## Getting Started
+
+Install dependencies:
+pip install -r requirements.txt
+
+Dataset structure:
+datasets
+  DLRSD
+  MLAID
+  WHDLD
+
+Training example:
+python train.py --loss macl --dataset dlrsd
+
+Evaluation:
+python evaluate.py --dataset dlrsd
+
+
 
 ## Results (Summary)
 
@@ -83,7 +96,12 @@ mean Average Precision, normalized Discounted Cumulative Gain, and weighted Aver
 
 Improvements are especially visible on rare classes and challenging retrieval cases.
 
----
+
+
+
+## Contact
+
+For questions or feedback, please open an issue in this repository.
 
 
 ## Getting Started
@@ -91,5 +109,3 @@ Improvements are especially visible on rare classes and challenging retrieval ca
 ### Install dependencies
 ```bash
 pip install -r requirements.txt
-
-
