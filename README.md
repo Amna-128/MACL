@@ -81,11 +81,6 @@ datasets
   MLAID
   WHDLD
 
-Training example:
-python train.py --loss macl --dataset dlrsd
-
-Evaluation:
-python evaluate.py --dataset dlrsd
 
 
 
@@ -104,8 +99,3 @@ Improvements are especially visible on rare classes and challenging retrieval ca
 For questions or feedback, please open an issue in this repository.
 
 
-## Getting Started
-
-### Install dependencies
-```bash
-pip install -r requirements.txt
